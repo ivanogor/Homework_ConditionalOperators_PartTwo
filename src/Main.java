@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        task5();
+        task2();
     }
     public static void task1(){
         int clientOS = 1;
@@ -15,28 +15,13 @@ public class Main {
     }
 
     public static void task2(){
-        int clientOS = 0;
-        int clientDeviceYear = 2013;
+        int clientOS = 1;
+        int clientDeviceYear = 2015;
 
-        String sample = "Установите версию приложения для ";
-        String sampleForOlderDevices = "Установите облегченную версию приложения для ";
+        String versionOfApp = clientDeviceYear >= 2015 ? "Установите версию приложения" : "Установите облегченную версию приложения";
+        String userSystem = clientOS == 0 ? " для Android по ссылке" : " для iOS по ссылке";
 
-        if(clientOS == 1){
-            if(clientDeviceYear < 2015){
-                System.out.println(sampleForOlderDevices + "Android по ссылке.");
-            }
-            else {
-                System.out.println(sample + "Android по ссылке.");
-            }
-        }
-        else {
-            if(clientDeviceYear < 2015){
-                System.out.println(sampleForOlderDevices + "iOS по ссылке.");
-            }
-            else {
-                System.out.println(sample + "iOS по ссылке.");
-            }
-        }
+        System.out.println(versionOfApp + userSystem);
     }
 
     public static void task3(){
