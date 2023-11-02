@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        task2();
+        task3();
     }
     public static void task1(){
         int clientOS = 1;
@@ -26,8 +26,7 @@ public class Main {
 
     public static void task3(){
         int year = 2021;
-
-        boolean isLeap = year % 4 == 0 && year % 100 != 0 && year > 1584;
+        boolean isLeap = year > 1584 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0));
 
         if(isLeap){
             System.out.println(year + " год является високосным.");
